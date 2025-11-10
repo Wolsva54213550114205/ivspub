@@ -7,7 +7,6 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
-const openBtn = document.getElementById('searchButton');
 const overlay = document.getElementById('searchOverlay');
 const container = document.querySelector('.search-container');
 const input = document.getElementById('searchInput');
@@ -16,10 +15,7 @@ const noResults = document.getElementById('noResults');
 
 const suggestionItems = document.querySelectorAll('.suggestion');
 
-openBtn.addEventListener('click', () => {
-  overlay.style.display = 'flex';
-  input.focus();
-});
+
 
 input.addEventListener('input', () => {
   const query = input.value.trim().toLowerCase();
@@ -71,4 +67,5 @@ function closeOverlay() {
   suggestionItems.forEach(item => {
     item.style.display = 'block';
   });
+
 }
